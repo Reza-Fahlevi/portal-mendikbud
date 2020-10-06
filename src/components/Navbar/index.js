@@ -109,7 +109,7 @@ const Navbar = ({ size, theme, toggle }) => {
             <MenuContainer>
               <StyledLink active>
                 <Link href="/" passHref>
-                  <a style={{ color: theme.primary, fontWeight: '700' }}>RANDY</a>
+                  <a style={{ color: theme.primary, fontWeight: '700' }}>Logo</a>
                 </Link>
               </StyledLink>
             </MenuContainer>

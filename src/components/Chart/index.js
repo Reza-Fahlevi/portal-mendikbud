@@ -56,9 +56,33 @@ const Content = styled.div`
   `}
 `
 
+const ContentBig = styled.div`
+  cursor: pointer;
+  padding-bottom: 32px;
+  width: 100%;
+//   height: 50%;
+
+  ${(props) => props.index == 0 ? `
+    margin-left: 0;
+  ` : `
+    margin-left: ${props.index % 2 !== 0 ? '-20px !important' : 0};
+  `}
+
+  ${(props) => props.size.width < 768 && `
+    width: 100% !important;
+    margin: 0 !important;
+  `}
+`
+
 const ImageContainer = styled.div`
   border-radius: 8px;
   height: 176px;
+  width: 100%;
+`
+
+const ImageContainerBig = styled.div`
+  border-radius: 8px;
+  height: 200px;
   width: 100%;
 `
 
@@ -68,12 +92,28 @@ const Image = styled.img`
   object-fit: cover;
   width: 100%;
 `
+const ChartImage = styled.img`
+  border-radius: 8px;
+  height: 150%;
+  object-fit: cover;
+  width: 100%;
+`
 
 const Title = styled.p`
   color: ${({ theme }) => theme.primary};
   font-size: 20px;
   font-weight: 500;
   margin-top: 8px !important;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  transition: ${({ theme }) => theme.transition};
+`
+
+const ChartTitle = styled.p`
+  color: ${({ theme }) => theme.primary};
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 100px !important;
   margin-block-end: 0;
   margin-block-start: 0;
   transition: ${({ theme }) => theme.transition};
@@ -94,86 +134,51 @@ const Description = styled(Title)`
   margin: 0;
 `
 
-const Project = ({ data, size }) => (
+const Chart = ({ data, size }) => (
   <>
-    <ContainerHeader id="project">
-      <TitleHeader>TERPOPULER</TitleHeader>
-      <SeeMore
-        size={size}
-        href="https://github.com/RandyWardhana"
-        target="_blank"
-        rel="noopener noreferer"
-      >
-        See More on Github
-      </SeeMore>
+    <ContainerHeader id="chart">
+      <TitleHeader>GRAFIK</TitleHeader>
     </ContainerHeader>
     
     <ContainerContent>
       <Content size={size}>
         <ImageContainer>
-          <Image src={'/images/profil_pendidikan.png'} />
+          <ChartImage src={'/images/jumlah_satuan_pendidikan.png'} />
         </ImageContainer>
-        <Title>Profil Pendidikan</Title>
-        <Truncate>
+        <ChartTitle>Jumlah Satuan Pendidkan</ChartTitle>
+        {/* <Truncate>
           <Description>Menyediakan profil yang berkaitan tentang informasi pendidikan dan kebudayaan dalam ruang lingkup kabupaten/kota/provinsi/nasional.</Description>
-        </Truncate>
+        </Truncate> */}
       </Content>
 
       <Content size={size}>
         <ImageContainer>
-          <Image src={'/images/publikasi_pendidikan.png'} />
+          <ChartImage src={'/images/persentase_pendidik.png'} />
         </ImageContainer>
-        <Title>Publikasi Pendidikan</Title>
-        <Truncate>
+        <ChartTitle>Persentase Pendidik</ChartTitle>
+        {/* <Truncate>
           <Description>Publikasi menyediakan produk-produk statistik dan kajian analisis berupa buku elektronik yang dapat diunduh.</Description>
-        </Truncate>
+        </Truncate> */}
       </Content>
 
-      <Content size={size}>
-        <ImageContainer>
-          <Image src={'/images/informasi_basis_spasial.png'} />
-        </ImageContainer>
-        <Title>Informasi Basis Spasial</Title>
-        <Truncate>
-          <Description>Spasial menyajikan informasi tentang capaian indikator-indikator makro pendidikan di tingkat Sekolah, Kabupaten/Kota/Provinsi dan Nasional ditinjau dari perspektif Spasial/Ruang/Geografi.</Description>
-        </Truncate>
-      </Content>
-
-      <Content size={size}>
-        <ImageContainer>
-          <Image src={'/images/statistik_pendidikan.png'} />
-        </ImageContainer>
-        <Title>Statistik Pendidikan</Title>
-        <Truncate>
-          <Description>Statistik menyajikan statistik pendidikan dalam wujud profil atau potret pendidikan pada tingkat Satuan Pendidikan, Kabupaten/Kota, Provinsi dan Nasional.</Description>
-        </Truncate>
-      </Content>
-
-      {/* {data.map((item, index) => {
-        return (
-          <Content key={index} size={size} index={index} onClick={() => window.open(item.url)}>
-            <ImageContainer>
-              <Image alt={item.title} src={item.image} />
-            </ImageContainer>
-            <Title>{item.title}</Title>
-            <Truncate>
-              <Description>{item.description}</Description>
-            </Truncate>
-          </Content>
-        )
-      })} */}
-
-      <SeeMore
-        size={size}
-        href="https://github.com/RandyWardhana"
-        target="_blank"
-        rel="noopener noreferer"
-        style={{ display: size.width < 425 ? 'inline-block' : 'none' }}
-      >
-        See More on Github
-      </SeeMore>
     </ContainerContent>
+    
+    <ContainerHeader id="chart">
+      <TitleHeader>JUMLAH PESERTA DIDIK</TitleHeader>
+    </ContainerHeader>
+    <ContainerContent>
+    <ContentBig size={size}>
+        <ImageContainerBig>
+          <ChartImage src={'/images/jumlah_peserta_didik.png'} />
+        </ImageContainerBig>
+        <ChartTitle></ChartTitle>
+        {/* <Truncate>
+          <Description>Menyediakan profil yang berkaitan tentang informasi pendidikan dan kebudayaan dalam ruang lingkup kabupaten/kota/provinsi/nasional.</Description>
+        </Truncate> */}
+      </ContentBig>
+    </ContainerContent>
+
   </>
 )
 
-export default Project
+export default Chart
