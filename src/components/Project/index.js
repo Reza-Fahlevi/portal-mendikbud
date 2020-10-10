@@ -108,6 +108,15 @@ const Project = ({ data, size }) => (
       </SeeMore>
     </ContainerHeader>
     <ContainerContent>
+    <Content size={size}>
+      <ImageContainer>
+        <Image src={'/images/vector.png'} />
+      </ImageContainer>
+      <Title>Title</Title>
+      <Truncate>
+        <Description>description</Description>
+      </Truncate>
+    </Content>
       {/* {data.map((item, index) => {
         return (
           <Content key={index} size={size} index={index} onClick={() => window.open(item.url)}>

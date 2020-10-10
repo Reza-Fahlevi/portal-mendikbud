@@ -1,6 +1,5 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import vector from '../../../public/images/vector.png'
 
 import { Download } from '../Svg'
 
@@ -113,8 +112,8 @@ const Header = ({ size, theme }) => {
       </ProfileContainer>
       {size.width >= 768 &&
         <ImageContainer>
-          {/* <Img alt={data.name} src={'https://firebasestorage.googleapis.com/v0/b/site-randy.appspot.com/o/avatar%2Fbandy.png?alt=media&token=ba3bab28-929d-4ec1-acb0-0a25450f656a'} /> */}
-          {/* <Img src={require('images/vector.png)}')} /> */}
+          {/* <Img src={'https://firebasestorage.googleapis.com/v0/b/site-randy.appspot.com/o/avatar%2Fbandy.png?alt=media&token=ba3bab28-929d-4ec1-acb0-0a25450f656a'} /> */}
+          <Img src={'/images/vector.png'} />
           {/* <Img src={vector} /> */}
         </ImageContainer>
       }
