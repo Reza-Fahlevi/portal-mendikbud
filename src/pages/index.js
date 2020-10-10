@@ -27,7 +27,7 @@ const Index = (props) => {
           <Project size={size} />
           {/* <Skills theme={props.theme} /> */}
           <Chart size={size} theme={props.theme} />
-          <Contact size={size} theme={props.theme} />
+          {/* <Contact size={size} theme={props.theme} /> */}
           <Footer size={size} theme={props.theme} />
         </div>
       </Layout>

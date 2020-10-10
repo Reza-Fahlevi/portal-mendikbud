@@ -78,7 +78,7 @@ const DownloadText = styled.span`
 `
 
 const ImageContainer = styled.div`
-  height: 400px;
+  height: 360px;
   margin-right: 64px;
   width: 400px;
   `
