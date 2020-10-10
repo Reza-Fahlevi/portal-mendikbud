@@ -34,6 +34,7 @@ export default class MyDocument extends Document {
         <Head>
           <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet" />
           <link rel="shortcut icon" href="/img/icon.png" />
+          <title>Portal Data dan Statistik Pendidikan</title>
         </Head>
         <body>
           <Main />

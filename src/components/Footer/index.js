@@ -12,6 +12,10 @@ const ContainerHeader = styled.div`
   ${(props) => props.size.width < 768 && css`
     margin: 16px 0 0;
   `}
+
+  .body {
+    background-color: #4a4a4a;
+  }
 `
 
 const TitleHeader = styled.p`
@@ -40,13 +44,13 @@ const Author = styled.a`
 const Footer = ({ size, theme }) => (
   <ContainerHeader size={size}>
     <TitleHeader>
-      Made with&ensp;<Heart size={size.width <= 375 ? 14 : 24} fill={theme.primary} />&ensp;by
+      {/* Made with&ensp;<Heart size={size.width <= 375 ? 14 : 24} fill={theme.primary} />&ensp;by */}
       <Author
-        href="https://github.com/RandyWardhana"
+        href="https://www.kemdikbud.go.id/main/"
         target="_blank"
         rel="noopener noreferer"
       >
-        Randy Wardhana
+        Kementerian Pendidikan dan Kebudayaan
       </Author>
     </TitleHeader>
   </ContainerHeader>

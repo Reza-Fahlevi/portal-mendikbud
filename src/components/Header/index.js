@@ -77,7 +77,7 @@ const DownloadText = styled.span`
 `
 
 const ImageContainer = styled.div`
-  height: 400px;
+  height: 360px;
   margin-right: 64px;
   width: 400px;
   `
@@ -97,12 +97,12 @@ const Header = ({ size, theme }) => {
   return (
     <Container size={size}>
       <ProfileContainer size={size}>
-        <Greeting>Good Ohayou</Greeting>
+        {/* <Greeting>Good Ohayou</Greeting> */}
         <Name>
-          I'm
-      <FullName size={size}>Reza Fahlevi</FullName>
+          Portal data dan<br/>
+      <FullName size={size}>Statistik Pendidikan</FullName>
         </Name>
-        <Profession>Jagoan Neon</Profession>
+        <Profession>Kementerian Pendidikan dan Kebudayaan</Profession>
         {/* {data.show_cv && (
           <DownloadCV size={size} onClick={() => window.open(data.cv)}>
             <Download fill={theme.primary} />
@@ -115,6 +115,7 @@ const Header = ({ size, theme }) => {
           {/* <Img src={'https://firebasestorage.googleapis.com/v0/b/site-randy.appspot.com/o/avatar%2Fbandy.png?alt=media&token=ba3bab28-929d-4ec1-acb0-0a25450f656a'} /> */}
           <Img src={'/images/vector.png'} />
           {/* <Img src={vector} /> */}
+          <Img src={'/images/vector.png'} />
         </ImageContainer>
       }
       {/* <input type='file' onChange={handleStoreImage} /> */}

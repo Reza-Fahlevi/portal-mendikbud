@@ -3,7 +3,8 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import Header from '../components/Header'
 import Project from '../components/Project'
-import Skills from '../components/Skills'
+// import Skills from '../components/Skills'
+import Chart from '../components/Chart'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 import Layout from '../layout'
@@ -24,8 +25,9 @@ const Index = (props) => {
           <Project data={props.responseProjects} size={size} /> */}
           <Header size={size} theme={props.theme} />
           <Project size={size} />
-          <Skills theme={props.theme} />
-          <Contact size={size} theme={props.theme} />
+          {/* <Skills theme={props.theme} /> */}
+          <Chart size={size} theme={props.theme} />
+          {/* <Contact size={size} theme={props.theme} /> */}
           <Footer size={size} theme={props.theme} />
         </div>
       </Layout>

@@ -74,6 +74,13 @@ const StyledLink = styled.p`
   `}
 `
 
+const Img = styled.img`
+  border-radius: 8px;
+  height: 50%;
+  object-fit: cover;
+  width: 50%;
+`
+
 const Modal = styled.div`
   background: ${({ theme }) => theme.primary};
   position: fixed;
@@ -109,7 +116,8 @@ const Navbar = ({ size, theme, toggle }) => {
             <MenuContainer>
               <StyledLink active>
                 <Link href="/" passHref>
-                  <a style={{ color: theme.primary, fontWeight: '700' }}>RANDY</a>
+                  {/* <a style={{ color: theme.primary, fontWeight: '700' }}>Logo</a> */}
+                  <Img src={'/images/logo-dark.png'} />
                 </Link>
               </StyledLink>
             </MenuContainer>
