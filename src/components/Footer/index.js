@@ -8,6 +8,8 @@ const ContainerHeader = styled.div`
   display: flex;
   justify-content: center;
   margin: 96px 0 0;
+  color: white;
+  background: #4a4a4a;
   
   ${(props) => props.size.width < 768 && css`
     margin: 16px 0 0;

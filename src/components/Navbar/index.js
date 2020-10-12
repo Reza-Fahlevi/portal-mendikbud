@@ -79,6 +79,7 @@ const Img = styled.img`
   height: 50%;
   object-fit: cover;
   width: 50%;
+  align-items: center;
 `
 
 const Modal = styled.div`
@@ -129,18 +130,28 @@ const Navbar = ({ size, theme, toggle }) => {
             {size.width > 576 && (
               <div style={{ display: 'flex' }}>
                 <StyledLink>
-                  <Link href="/#project" passHref>
-                    <a>Project</a>
+                  <Link href="" passHref>
+                    <a>Data</a>
                   </Link>
                 </StyledLink>
                 <StyledLink>
-                  <Link href="/#skills" passHref>
-                    <a>Skills</a>
+                  <Link href="" passHref>
+                    <a>Publikasi</a>
                   </Link>
                 </StyledLink>
                 <StyledLink>
-                  <Link href="/#contact" passHref>
-                    <a>Contact</a>
+                  <Link href="" passHref>
+                    <a>Spasial</a>
+                  </Link>
+                </StyledLink>
+                <StyledLink>
+                  <Link href="" passHref>
+                    <a>Statistik</a>
+                  </Link>
+                </StyledLink>
+                <StyledLink>
+                  <Link href="" passHref>
+                    <a>Layanan Data</a>
                   </Link>
                 </StyledLink>
                 <span style={{ alignItems: 'center', cursor: 'pointer', display: 'flex' }} onClick={toggle}>
@@ -156,19 +167,29 @@ const Navbar = ({ size, theme, toggle }) => {
           <span style={{ justifyContent: 'flex-end' }} onClick={() => handleMenu()}>
             <Close space={16} size={20} fill={theme.background} />
           </span>
-          <StyledLink onClick={() => handleMenu()} mobile>
-            <Link href="/#project" passHref>
-              <a>Project</a>
+          <StyledLink>
+            <Link href="" passHref>
+              <a>Data</a>
             </Link>
           </StyledLink>
-          <StyledLink onClick={() => handleMenu()} mobile>
-            <Link href="/#skills" passHref>
-              <a>Skills</a>
+          <StyledLink>
+            <Link href="" passHref>
+              <a>Publikasi</a>
             </Link>
           </StyledLink>
-          <StyledLink onClick={() => handleMenu()} mobile>
-            <Link href="/#contact" passHref>
-              <a>Contact</a>
+          <StyledLink>
+            <Link href="" passHref>
+              <a>Spasial</a>
+            </Link>
+          </StyledLink>
+          <StyledLink>
+            <Link href="" passHref>
+              <a>Statistik</a>
+            </Link>
+          </StyledLink>
+          <StyledLink>
+            <Link href="" passHref>
+              <a>Layanan Data</a>
             </Link>
           </StyledLink>
           <span style={{ marginBottom: 16 }} onClick={toggle}>
